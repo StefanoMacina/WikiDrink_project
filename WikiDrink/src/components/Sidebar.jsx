@@ -16,9 +16,9 @@ const Sidebar = () => {
     <aside className={ isSidebarOpen ? 'sidebar' : 'sidebar_closed'}>
         <div className='sidebar-title-container'>
             <h1>Drink Team</h1>
-            <button onClick={setSidebarOpen}>
+            <div className='sidebar-openClose-btn' onClick={setSidebarOpen}>
                 <AiOutlineArrowUp/>
-            </button>
+            </div>
         </div>
         <div className='sidebar-menu'>
             <ul>

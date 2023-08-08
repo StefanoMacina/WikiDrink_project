@@ -1,8 +1,9 @@
 import React from 'react'
+import Hero from '../components/Hero'
 
 const Contattaci = () => {
   return (
-    <div>Contattaci</div>
+   <Hero>contattaci</Hero>
   )
 }
 

@@ -65,6 +65,7 @@
     color:var(--main-color)
 }
 
+
 .navbar-hamburger{
     width: 30px;
     height: 30px;
@@ -74,12 +75,20 @@
     display: none;
 }
 
+.navbar-hamburger:hover{
+    transform: rotateZ(-90deg);
+    transition: transform 1s;
+}
+
 .navbar-hamburger > div {
     background-color: var(--main-color) ;
     width: 100%;
     height: 5px;
     border-radius: 50%;
 }
+
+
+
 
 @media screen and (max-width : 990px) {
     .nav-link , .nav-icons-container{
@@ -93,25 +102,35 @@
 /* Sidebar styling */
 
 .sidebar{
-    background-color: aquamarine;
+    background-color: white;
     min-height: 50vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* position: absolute;
-    top: 0; */
+    position: absolute;
+    top: 0;
+    transition: all ease 0.2s;
+    
 }
 
 .sidebar_closed{
     position: absolute;
-    right: -100%;
+    top: 0;
+    background-color: white;
+    transform: translateX(-100%);
+    transition: transform ease-out 0.2s;
 }
 
 .sidebar-title-container{
     display: flex;  
     justify-content: space-between;
     padding: 1rem;
+}
+
+.sidebar-openClose-btn:hover{
+    transform: rotateZ(-90deg);
+    transition: transform 0.5s;
 }
 
 .sidebar-menu > ul > li {

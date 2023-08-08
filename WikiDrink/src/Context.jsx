@@ -10,9 +10,6 @@ const AppProvider = ({children}) => {
         setIsSidebarOpen(!isSidebarOpen)
     }
 
-   
-   
-
     return <AppContext.Provider value={
        { isSidebarOpen,
         setSidebarOpen,
