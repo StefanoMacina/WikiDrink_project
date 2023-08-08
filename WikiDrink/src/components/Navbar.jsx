@@ -3,9 +3,15 @@ import { Link } from 'react-router-dom'
 import { FaFacebookSquare, FaTwitterSquare, FaYoutubeSquare } from 'react-icons/fa'
 import { AiFillHome, AiFillMessage } from 'react-icons/ai'
 import { FaPeopleGroup } from 'react-icons/fa6'
+import { useGlobalContext } from '../Context'
 
 
 const Navbar = () => {
+
+    const {isSidebarOpen , setSidebarOpen} = useGlobalContext()
+    console.log(isSidebarOpen, setSidebarOpen);
+
+
   return (
     <nav className='navbar'>
         <header className='nav-container'>
@@ -24,7 +30,7 @@ const Navbar = () => {
                     <li><FaYoutubeSquare/></li>
                 </ul>
             </div>
-            <div className='navbar-hamburger'>
+            <div className='navbar-hamburger' onClick={setSidebarOpen}>
                 <div></div>
                 <div></div>
                 <div></div>

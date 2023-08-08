@@ -4,14 +4,21 @@ import {Link} from 'react-router-dom'
 import { FaFacebookSquare, FaTwitterSquare, FaYoutubeSquare } from 'react-icons/fa'
 import { AiFillHome, AiFillMessage } from 'react-icons/ai'
 import { FaPeopleGroup } from 'react-icons/fa6'
+import { useGlobalContext } from '../Context'
 
 
 const Sidebar = () => {
+
+    const {isSidebarOpen, setSidebarOpen} = useGlobalContext()
+    
+
   return (
-    <aside className='sidebar'>
+    <aside className={ isSidebarOpen ? 'sidebar' : 'sidebar_closed'}>
         <div className='sidebar-title-container'>
             <h1>Drink Team</h1>
-            <AiOutlineArrowUp/>
+            <button onClick={setSidebarOpen}>
+                <AiOutlineArrowUp/>
+            </button>
         </div>
         <div className='sidebar-menu'>
             <ul>
