@@ -2,6 +2,7 @@ import React from 'react'
 
 const Hero = ({children, img, disabledOverlay}) => {
 
+// componente riutilizzabile in tutte le pagine
   return (
     <div className='hero-img-container'
     style={{
@@ -10,8 +11,10 @@ const Hero = ({children, img, disabledOverlay}) => {
         backgroundRepeat : 'no-repeat',
         backgroundSize : 'cover'
     }}>
-        <div>
-            {children}
+        <div className={`${!disabledOverlay ? 'hero-overlay' : ''}`}>
+            <div className="hero-text-container">
+                {children}
+            </div>
         </div>
     </div>
   )
