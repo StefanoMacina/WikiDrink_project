@@ -26,19 +26,19 @@ const About = () => {
       <div className="about-title">
         <h2>il nostro progetto</h2>
       </div>
-      <div className="about-card-container">
-      {
-        valueCards.map((card) => {
-          return(
-            <Card key={card.title} {...card} ></Card>
-          )
-        })
-      }
+      <div className="value-card-container">
+        {
+          valueCards.map((card) => {
+            return(
+              <Card key={card.title} {...card} ></Card>
+            )
+          })
+        }
       </div>
     </section>
     <section className="about-team">
-      <div>
-        <img src={teamImg} alt="" />
+      <div className="team-img-container">
+        <img src={teamImg} alt=""  />
       </div>
     </section>
     <section>
@@ -47,11 +47,11 @@ const About = () => {
           il nostro team
         </h2>
       </div>
-      <div>
+      <div className="team-card-container">
         {
           teamCards.map((card) => {
             return(
-              <Card key={card.title} {...card}></Card>
+              <Card key={card.title} {...card} className='team-card'></Card>
             )
           })
         }

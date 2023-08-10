@@ -1,26 +1,29 @@
 import React from 'react'
 
-const Card = ({title, text, img, subtitle}) => {
+const Card = ({title, text, img, subtitle, className}) => {
   return (
-    <div className='card-container'>
-        <h3>
-            {title}
-        </h3>
-        {
-            subtitle ?
-            <>
-                <div>
-                    <h6>
+    <div className={className ? `${className}` : 'card-content'}>
+        
+            <h3 className='card-title'>
+                {title}
+            </h3>
+            {
+                subtitle && 
+                <div className='card-subtitle'>
                     {subtitle}
-                    </h6>
                 </div>
-                <div>
-                    <img src="" alt="" />
-                </div> 
-            </> 
-            
-            : <div>{text}</div>
-        }
+            }
+            {
+                text ? (
+                    <div className='card-value-text'>
+                        <h6>{text}</h6>
+                    </div>
+                ) : (
+                    <div className='team-card-img-container'>
+                        <img src={img} alt="" />
+                    </div>
+                )
+            }
     </div>
   )
 }
