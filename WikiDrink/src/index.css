@@ -13,6 +13,7 @@
 :root {
   --main-color: rgb(86, 0, 160);
   --about-valuecards-bg : rgb(242, 242, 242);
+  --cta-color :  rgb(255, 60, 174);
 }
 /* NAVBAR COMPONENT */
 
@@ -278,8 +279,8 @@
 .hero-overlay{
   width: 100%;
   height: 100%;
-  background-color: black;
-  opacity: 0.8;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 2;
 }
 
 .hero-text-container{
@@ -407,4 +408,83 @@
 
 .contact-us-form > div > hr{
   opacity: 0.4;
+}
+
+.form-send-btn{
+  display: grid;
+  place-items: center;
+}
+
+.form-send-btn > button{
+  padding: 10px 0;
+  border: none;
+  border-radius: 40px;
+  width: 70%;
+  background-color: var(--cta-color);
+  color: white;
+  font-weight: bold;
+}
+
+@media screen and (min-width : 750px){
+  .form-send-btn > button {
+    width: 40%;
+  }
+}
+
+.form-send-btn > button:hover{
+  background: blueviolet;
+}
+
+.form-send-btn > button:active{
+  transform:scale(110%);
+  background: var(--cta-color);
+}
+
+/* HOME PAGE */
+
+.home-container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  height: 100%;
+}
+
+.home-first-container{
+  display: grid;
+  place-items: center;
+}
+
+.home-text-container > h1{
+  font-size: 2.5rem;
+  color: var(--cta-color);
+  margin-bottom: 20px;
+}
+
+.home-text-container > p{
+  margin: 40px 0 20px ; 
+  font-size: 0.8rem;
+  text-transform: initial;
+  width: 70ch;
+  opacity: 0.8;
+}
+
+.home-cta-btn{
+  background-color: var(--cta-color);
+  padding: 15px;
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+}
+
+.home-cta-btn:hover{
+  transform: scale(110%);
+  background-color: blueviolet;
+}
+
+.home-cta-btn> a {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.image, .home-first-container{
+
 }
