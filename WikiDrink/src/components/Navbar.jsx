@@ -9,8 +9,7 @@ import { useGlobalContext } from '../Context'
 const Navbar = () => {
 
     const {isSidebarOpen , setSidebarOpen} = useGlobalContext()
-    console.log(isSidebarOpen);
-
+    
   return (
     <nav className='navbar'>
         <header className='nav-container'>
