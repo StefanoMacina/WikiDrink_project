@@ -477,13 +477,19 @@
   border-radius: 25px;
 }
 
+.text-container-home > button:hover{
+  background-color: blueviolet;
+  transform: scale(110%);
+  transition: all ease 0.2s;
+}
+
 .text-container-home > button > a {
   color: white;
   font-weight: bold;
 }
 
 .img-container-home {
-  border: 1px solid yellow;
+  max-height: 50%;
 }
 
 @media screen and (min-width: 990px) {

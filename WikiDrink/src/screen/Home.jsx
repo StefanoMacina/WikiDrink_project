@@ -2,6 +2,8 @@ import React from "react";
 import Hero from "../components/Hero";
 import homeImg from "../assets/image/home-hero.jpg";
 import { Link } from "react-router-dom";
+import animation from '../assets/animations/animation_llaqci4u.json'
+import Lottie2 from 'react-lottie'
 
 const Home = () => {
   return (
@@ -20,7 +22,19 @@ const Home = () => {
           </button>
         </div>
         <div className="img-container-home">
-          svg img
+          <Lottie2
+          options={{
+            loop : true,
+            autoplay : true,
+            reverse : true,
+            animationData : animation,
+            rendererSettings : {
+              preserveAspectRatio : 'xMidYMid slice'
+            }
+          }}
+          height={300}>
+
+          </Lottie2>
         </div>
       </div>
     </Hero>
