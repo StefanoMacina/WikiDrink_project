@@ -55,7 +55,7 @@ const Home = () => {
 
       <div className="search-bar-container">
         <div className="search-bar-content">
-          <div>
+          <div className="searchbar-form-count">
             <form onSubmit={handleSubmit} className="homepage-form">
               <label htmlFor="">cerca il tuo drink</label>
               <div className="input-search">
@@ -72,14 +72,17 @@ const Home = () => {
             </form>
             <p className="items-result">{count} risultati</p>
           </div>
+          
+
           {!isLoading && isError ? (
             <ErrorMessage>Nessun cocktail trovato</ErrorMessage>
-          ) : !isLoading && !isError ? (
-            <Cocktails data={data.drinks} />
-          ) : (
-            <Loading />
-          )}
-        </div>
+            ) : !isLoading && !isError ? (
+              <Cocktails data={data.drinks} />
+              ) : (
+                <Loading />
+                )}
+            </div>
+       
       </div>
     </>
   );
