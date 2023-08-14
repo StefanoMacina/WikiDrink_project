@@ -9,6 +9,7 @@ import { useGlobalContext } from '../Context'
 const Navbar = () => {
 
     const {isSidebarOpen , setSidebarOpen} = useGlobalContext()
+    console.log(isSidebarOpen);
 
   return (
     <nav className='navbar'>
@@ -29,9 +30,9 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className='navbar-hamburger' onClick={setSidebarOpen}>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div className={`hamburger-div ${isSidebarOpen ? `first-div-active` : ``}`}></div>
+                <div className={`hamburger-div ${isSidebarOpen ? `central-div-active` : ''}`}></div>
+                <div className={`hamburger-div ${isSidebarOpen ? `last-div-active` : ``}`}></div>
             </div>
         </header>
     </nav>

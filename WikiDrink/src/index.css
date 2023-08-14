@@ -82,17 +82,34 @@
   display: none;
 }
 
-.navbar-hamburger:hover {
-  transform: rotateZ(-90deg);
-  transition: transform 1s;
-}
 
-.navbar-hamburger > div {
+
+
+.hamburger-div {
   background-color: var(--main-color);
   width: 100%;
   height: 5px;
   border-radius: 50%;
 }
+
+.first-div-active{
+  transform: translateY(-15px);
+  opacity: 0;
+  transition: all ease .2s;
+  
+}
+
+.central-div-active{
+  opacity: 0;
+  transition: all ease .2s;
+}
+
+.last-div-active{
+  transform: translateY(15px);
+  opacity: 0;
+  transition: all ease .2s;
+}
+
 
 @media screen and (max-width: 990px) {
   .nav-link,
@@ -139,9 +156,8 @@
   padding: 1rem;
 }
 
-.sidebar-openClose-btn:hover {
+.sidebar-openClose-btn {
   transform: rotateZ(-90deg);
-  transition: transform 0.5s;
 }
 
 .sidebar-menu > ul > li {
