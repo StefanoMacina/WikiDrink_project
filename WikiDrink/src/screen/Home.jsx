@@ -44,13 +44,14 @@ const Home = () => {
       </div>
       <div className="search-bar-container">
         <div className="search-bar-content">
-          <form action="">
+          <form action="" className="homepage-form">
             <label htmlFor="">cerca il tuo drink</label>
               <div className="input-search">
                 <input type="text" value={input} onChange={e => setInput(e.target.value)}  onClick={()=>setInput('')}/>
                 <button><FaSearch className="icon"/></button>
               </div>
           </form>
+          <p className="items-result">3 risultati</p>
         </div>
       </div>
     </Hero>

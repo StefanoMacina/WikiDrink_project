@@ -513,7 +513,6 @@
 
 .search-bar-content{
   padding: 20px;
-
 }
 .search-bar-content > form > label {
  text-transform: initial;
@@ -532,8 +531,26 @@
   border-radius: 25px;
 }
 
+.items-result{
+  text-transform: initial;
+  color: grey;
+}
+
 .input-search > button {background: none; border: none;}
 
 .icon{
   color: var(--cta-color);
+}
+@media screen  and (min-width : 990px){
+  .homepage-form{
+    display: flex;
+    align-items: center; 
+    gap: 50px;
+  }
+  .search-bar-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 40px;
+  }
 }
