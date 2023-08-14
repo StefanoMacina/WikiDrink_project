@@ -7,7 +7,9 @@ import { FaPeopleGroup } from 'react-icons/fa6'
 import { useGlobalContext } from '../Context'
 
 
+
 const Sidebar = () => {
+   
 
     const {isSidebarOpen, setSidebarOpen} = useGlobalContext()
     

@@ -16,7 +16,6 @@ const Contattaci = () => {
     email : '',
     tel : '',
     recipe : ''
-
   })
 
   const handleChange = (e) => {
