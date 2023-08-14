@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Hero from "../components/Hero";
 import homeImg from "../assets/image/home-hero.jpg";
 import { Link } from "react-router-dom";
 import animation from '../assets/animations/animation_llaqci4u.json'
 import Lottie2 from 'react-lottie'
+import {FaSearch} from 'react-icons/fa'
 
 const Home = () => {
+
+  const [input, setInput] = useState('negroni')
+
+  
+
   return (
     <Hero img={homeImg}>
       <div className="home-container">
@@ -33,8 +39,18 @@ const Home = () => {
             }
           }}
           height={300}>
-
           </Lottie2>
+        </div>
+      </div>
+      <div className="search-bar-container">
+        <div className="search-bar-content">
+          <form action="">
+            <label htmlFor="">cerca il tuo drink</label>
+              <div className="input-search">
+                <input type="text" value={input} onChange={e => setInput(e.target.value)}  onClick={()=>setInput('')}/>
+                <button><FaSearch className="icon"/></button>
+              </div>
+          </form>
         </div>
       </div>
     </Hero>

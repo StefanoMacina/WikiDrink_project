@@ -504,3 +504,36 @@
     margin-left: 40px;
   }
 }
+
+
+.search-bar-container {
+  color: black;
+  margin-top: 20px;
+}
+
+.search-bar-content{
+  padding: 20px;
+
+}
+.search-bar-content > form > label {
+ text-transform: initial;
+ font-weight: bold;
+}
+
+.input-search{
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.input-search > input {
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.input-search > button {background: none; border: none;}
+
+.icon{
+  color: var(--cta-color);
+}
